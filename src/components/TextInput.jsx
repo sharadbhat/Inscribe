@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { Input, message } from 'antd'
 
-// CSS
-import '../App.css';
+// Utils
+import { Context } from '../utils/Context'
 
-const { TextArea } = Input;
+// CSS
+import '../App.css'
+
+const { TextArea } = Input
 
 class TextInput extends Component {
   constructor (props) {
@@ -23,16 +26,18 @@ class TextInput extends Component {
       })
       message.success('Content restored from browser storage!')
     }
-    window.addEventListener('beforeunload', this.componentCleanup);
+    window.addEventListener('beforeunload', this.componentCleanup)
   }
 
   componentCleanup = () => {
-    localStorage.setItem('inscribe.cachedText', this.state.text)
+    if (this.context.state.autoSave) {
+      localStorage.setItem('inscribe.cachedText', this.state.text)
+    }
   }
 
   componentWillUnmount = () => {
-    this.componentCleanup();
-    window.removeEventListener('beforeunload', this.componentCleanup);
+    this.componentCleanup()
+    window.removeEventListener('beforeunload', this.componentCleanup)
   }
 
   updateText = newText => {
@@ -55,5 +60,7 @@ class TextInput extends Component {
     )
   }
 }
+
+TextInput.contextType = Context
 
 export default TextInput
