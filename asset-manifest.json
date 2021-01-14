@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/inscribe/static/css/main.2a52e795.chunk.css",
+    "main.js": "/inscribe/static/js/main.5253befc.chunk.js",
+    "main.js.map": "/inscribe/static/js/main.5253befc.chunk.js.map",
+    "runtime-main.js": "/inscribe/static/js/runtime-main.dd0bc290.js",
+    "runtime-main.js.map": "/inscribe/static/js/runtime-main.dd0bc290.js.map",
+    "static/css/2.b544de60.chunk.css": "/inscribe/static/css/2.b544de60.chunk.css",
+    "static/js/2.3795c625.chunk.js": "/inscribe/static/js/2.3795c625.chunk.js",
+    "static/js/2.3795c625.chunk.js.map": "/inscribe/static/js/2.3795c625.chunk.js.map",
+    "static/js/3.f785c75a.chunk.js": "/inscribe/static/js/3.f785c75a.chunk.js",
+    "static/js/3.f785c75a.chunk.js.map": "/inscribe/static/js/3.f785c75a.chunk.js.map",
+    "index.html": "/inscribe/index.html",
+    "static/css/2.b544de60.chunk.css.map": "/inscribe/static/css/2.b544de60.chunk.css.map",
+    "static/css/main.2a52e795.chunk.css.map": "/inscribe/static/css/main.2a52e795.chunk.css.map",
+    "static/js/2.3795c625.chunk.js.LICENSE.txt": "/inscribe/static/js/2.3795c625.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd0bc290.js",
+    "static/css/2.b544de60.chunk.css",
+    "static/js/2.3795c625.chunk.js",
+    "static/css/main.2a52e795.chunk.css",
+    "static/js/main.5253befc.chunk.js"
+  ]
+}
