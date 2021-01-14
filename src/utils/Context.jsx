@@ -28,7 +28,6 @@ class Provider extends Component {
     if (!autoSave) {
       window.localStorage.removeItem('inscribe.cachedText')
     }
-    console.log(localStorage);
   }
 
   render() {
