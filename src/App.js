@@ -2,6 +2,7 @@ import { Layout } from 'antd'
 
 // Components
 import Logo from './components/Logo'
+import Save from './components/Save'
 import Settings from './components/Settings'
 import TextInput from './components/TextInput'
 
@@ -21,7 +22,10 @@ function App() {
         <Header>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <Logo />
-            <Settings />
+            <div style={{ width: 100, display: 'flex', justifyContent: 'space-around' }}>
+              <Save />
+              <Settings />
+            </div>
           </div>
         </Header>
         <Content className='textInputContainer'>
