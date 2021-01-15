@@ -7,6 +7,7 @@ class Provider extends Component {
     super(props)
     this.state = {
       autoSave: true,
+      content: '',
     }
   }
 
@@ -19,7 +20,7 @@ class Provider extends Component {
     }
   }
 
-  setAutoSave = (autoSave) => {
+  setAutoSave = autoSave => {
     this.setState({
       autoSave,
     })
@@ -30,12 +31,19 @@ class Provider extends Component {
     }
   }
 
+  setContent = content => {
+    this.setState({
+      content
+    })
+  }
+
   render() {
     return (
       <Context.Provider
         value={{
           state: this.state,
           setAutoSave: this.setAutoSave,
+          setContent: this.setContent
         }}
       >
         {this.props.children}

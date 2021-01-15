@@ -21,9 +21,7 @@ class TextInput extends Component {
   componentDidMount = () => {
     let cachedText = localStorage.getItem('inscribe.cachedText')
     if (cachedText !== undefined && cachedText !== null && cachedText !== '') {
-      this.setState({
-        text: cachedText
-      })
+      this.context.setContent(cachedText)
       message.success('Content restored from browser storage!')
     }
     window.addEventListener('beforeunload', this.componentCleanup)
@@ -31,7 +29,7 @@ class TextInput extends Component {
 
   componentCleanup = () => {
     if (this.context.state.autoSave) {
-      localStorage.setItem('inscribe.cachedText', this.state.text)
+      localStorage.setItem('inscribe.cachedText', this.context.state.content)
     }
   }
 
@@ -41,19 +39,18 @@ class TextInput extends Component {
   }
 
   updateText = newText => {
-    this.setState({
-      text: newText.target.value
-    })
+    this.context.setContent(newText.target.value)
   }
 
   render() {
     return (
       <div>
         <TextArea
+          style={{ fontSize: '100px' }}
           placeholder='Start typing...'
           allowClear
           autoSize={{minRows: 26}}
-          value={this.state.text}
+          value={this.context.state.content}
           onChange={this.updateText}
         />
       </div>
