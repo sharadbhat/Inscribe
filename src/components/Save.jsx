@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Input, Popover, Tooltip } from 'antd'
+import { Button, Input, message, Popover, Tooltip } from 'antd'
 
 // Utils
 import { Context } from '../utils/Context'
@@ -23,6 +23,8 @@ class Save extends Component {
     a.href= URL.createObjectURL(file)
     a.download = this.state.filename + this.state.extension
     a.click()
+
+    message.success('File downloaded successfully')
 
 	  URL.revokeObjectURL(a.href)
   }
